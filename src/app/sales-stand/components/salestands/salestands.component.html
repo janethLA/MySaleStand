@@ -1,0 +1,15 @@
+<div class="search-bar">
+    <mat-form-field  class="search" appearance="outline" style="width: 100%;">
+        <input matInput placeholder="Ingrese el puesto de venta a buscar" >
+       <mat-icon matSuffix>search</mat-icon>
+       <mat-autocomplete #auto="matAutocomplete">
+      </mat-autocomplete>
+     </mat-form-field>
+     <button   color="primary" mat-raised-button >BUSCAR</button>
+</div> 
+<div style="display: flex;  flex-wrap: wrap; padding: 5px; "  >
+    <app-sale  style="margin-right: 25px; margin-bottom: 25px;" 
+               *ngFor = "let s of sales" 
+               [sales]="s">
+    </app-sale>
+</div>

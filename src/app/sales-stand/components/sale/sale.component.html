@@ -1,0 +1,14 @@
+<mat-card class="main ">
+    <mat-card-title class="saleStandName">{{sales.salesStandName | uppercase}}</mat-card-title>
+    <div class="image">
+      <img mat-card-image [src]="sales.image" alt="Photo of a SalesStand">
+      <!-- <button  *ngIf="edit"mat-icon-button style="font-size: 5px;"  (click)="editImage(image)"><mat-icon>edit</mat-icon></button> -->
+    </div>
+    <mat-card-content  class="content">
+      <p>Dirección: <span style="font-weight: lighter; font-size: small;">{{ sales.address | slice:0:50 }} </span></p>
+      <p>Descripción: <span style="font-weight: lighter; font-size: small;">{{ sales.description | slice:0:80}} </span></p>
+    </mat-card-content>
+    <mat-card-actions style="padding: 10px;" class="buttonAct">
+      <button  mat-raised-button color="primary" mat-button class="button"  > VER MÁS  </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,49 @@
+<div class="sale-container">
+    <form>
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;"> 
+            <h2>REGISTRAR PUESTO DE VENTA</h2>
+        </div> 
+          <p>
+            <mat-form-field appearance="outline"   style="width: 50%;">
+              <mat-label>Nombre del Puesto de Venta</mat-label>
+              <input matInput placeholder="Ingrese nombre del puesto de venta">
+              <mat-hint>Hint</mat-hint>
+              <mat-error>este campo es requerido</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" style="width: 50%;">
+                <mat-label>Dirección</mat-label>
+                <input matInput placeholder="Ingrese la dirección" required type="text">
+                 <mat-error>este campo es requerido</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" style="width: 50%;">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput placeholder="Ingrese una descripción" required type="text"></textarea>
+                 <mat-error>este campo es requerido</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" style="width: 50%;">
+                <mat-label><mat-icon style="font-size: 25px;">upload_file</mat-icon>Añadir imagen</mat-label>
+                <input matInput placeholder="Ingrese una descripción" required type="text" >
+                 <mat-error>este campo es requerido</mat-error>
+            </mat-form-field>
+          </p>   
+          <p style="text-align: start;" style="width: 100%;">Marque la ubicacion en el mapa:</p>      
+          <div class="map">
+    
+          </div>
+          <div style="text-align: center; width: 100%;">
+            <button mat-raised-button type="submit" class="btn-login" [disabled]="saleForm.invalid">
+                REGISTRAR
+            </button>
+        </div>
+    </form>    
+</div>
+
+
+
+  
