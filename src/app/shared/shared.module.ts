@@ -8,6 +8,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SalesStandModule } from '../sales-stand/sales-stand.module';
 
 import { RouterModule } from '@angular/router';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     LayoutComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ConfirmDialogComponent
     
   ],
   imports: [

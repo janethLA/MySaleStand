@@ -37,8 +37,8 @@ export class SalestandService {
     return this.http.put(`${environment.urlApi}/api/SalesStand/`+id, body);
   }
 
-  // deleteSalesStand(id: string): any {
-  //   return this.http.delete(`${environment.url_api}/products/${id}`);
-  // }
+  deleteSalesStand(id: Number): any {
+    return this.http.delete(`${environment.urlApi}/api/SalesStand/`+id);
+  }
 
 }

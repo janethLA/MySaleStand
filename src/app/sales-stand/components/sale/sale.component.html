@@ -1,18 +1,18 @@
 <mat-card class="main ">
-    <mat-card-title class="saleStandName">{{sales.salesStandName | uppercase}}</mat-card-title>
+    <mat-card-title class="saleStandName">{{sale.salesStandName | uppercase}}</mat-card-title>
     <div class="image">
-      <img mat-card-image [src]="sales.image" alt="Photo of a SalesStand">
+      <img mat-card-image [src]="sale.image" alt="Photo of a SalesStand">
       </div>
     <mat-card-content  class="content">
-      <p>Dirección: <span style="font-weight: lighter; font-size: small;">{{ sales.address | slice:0:50 }} </span></p>
-      <p>Descripción: <span style="font-weight: lighter; font-size: small;">{{ sales.description | slice:0:100}} </span></p>
+      <p>Dirección: <span style="font-weight: lighter; font-size: small;">{{ sale.address | slice:0:50 }} </span></p>
+      <p>Descripción: <span style="font-weight: lighter; font-size: small;">{{ sale.description | slice:0:100}} </span></p>
     </mat-card-content>
     <mat-card-actions style="padding: 10px;" class="buttonAct">
       <button  mat-raised-button color="primary" mat-button class="button"  > VER MÁS  </button>
-      <button  *ngIf="boolEdit"  mat-icon-button  style="font-size: 5px; margin: 5px;" [routerLink]="['/seller/updateSaleStand',sales.id]" >
+      <button  *ngIf="boolEdit"  mat-icon-button  style="font-size: 5px; margin: 5px;" [routerLink]="['/seller/updateSaleStand',sale.id]" >
         <mat-icon>edit</mat-icon>
       </button>
-      <button  *ngIf="boolDelete" mat-icon-button color="warn" style="font-size: 10px; margin: 5px;" >
+      <button  *ngIf="boolDelete" mat-icon-button color="warn" style="font-size: 10px; margin: 5px;"  (click)="openDialog()">
         <mat-icon>delete</mat-icon>
       </button>
     </mat-card-actions>

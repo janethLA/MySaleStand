@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Borrar</h1>
+<div mat-dialog-content>
+  Esta seguro(a) que desea borrar {{message}} ?
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="onClickNo()">No</button>
+  <button mat-button mat-dialog-close [matDialogClose]="true" cdkFocusInitial>Si</button>
+</div>

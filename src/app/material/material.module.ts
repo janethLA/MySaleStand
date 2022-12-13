@@ -32,6 +32,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -67,8 +68,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatDatepickerModule,
     MatNativeDateModule,
     MatStepperModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
   ],
   exports:[
     ReactiveFormsModule,
