@@ -51,10 +51,9 @@ mat-button {
 }
 
 button:hover { 
-  color: #ffffff;
+ 
   border-style: solid;
-  border-color:#e2dddd ; 
+  border-color:#004683 ; 
   cursor: pointer; 
-}
-
+} 
 

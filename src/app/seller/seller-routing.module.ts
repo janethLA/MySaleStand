@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListSalesStandComponent } from './components/list-sales-stand/list-sales-stand.component';
 import { FormSaleComponent } from './components/form-sale/form-sale.component';
 import { ReactiveFormsModule} from '@angular/forms'
+import { SaleEditComponent } from './components/sale-edit/sale-edit.component';
 const routes: Routes = [
   {
     path: 'showSaleStand',
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'createSaleStand',
     component: FormSaleComponent
+  },
+  {
+    path: 'updateSaleStand/:id',
+    component: SaleEditComponent
   }
 ];
 

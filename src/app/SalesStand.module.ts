@@ -1,5 +1,5 @@
 export interface SalesStand {
-    id: number;
+    id: Number;
     salesStandName: string;
     address: string;
     image: any;

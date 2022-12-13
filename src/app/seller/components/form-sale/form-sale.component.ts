@@ -44,14 +44,14 @@ export class FormSaleComponent implements OnInit {
   saveSale(){
     this.salestandService.createSalesStand(this.formData).subscribe({
       next:()=>{
-        this.snack.open('Categoria registrada exitosamente.','CERRAR',{duration:100000,panelClass:'snackSuccess',})
+        this.snack.open('Puesto de Venta registrada exitosamente.','CERRAR',{duration:100000,panelClass:'snackSuccess',})
         this.router.navigate(['/seller/showSaleStand']).then(() => {
         window.location.reload();
         });
             
       },
       error:()=>{
-        this.snack.open('Fallo al registrar la categoria','CERRAR',{duration:20000});
+        this.snack.open('Fallo al registrar el Puesto de Venta','CERRAR',{duration:20000});
         
       }
       })

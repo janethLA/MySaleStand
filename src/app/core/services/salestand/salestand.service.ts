@@ -14,13 +14,11 @@ export class SalestandService {
 
   //getAllSalesStand(): Observable<Product[]> {
   getAllSalesStand(){
-    //return this.http.get<Product[]>(`${environment.url_api}/products`);
     return this.http.get<SalesStand []>(`${environment.urlApi}/api/allSalesStands`);
   }
   //getSalesStand(id: string): Observable<Product> {
-  getSaleStand(id: string){
-    //return this.http.get<Product>(`${environment.url_api}/products/${id}`);
-    return this.http.get<SalesStand>(`${environment.urlApi}/api/SalesStand/$(id)`);
+  getSaleStand(id: Number){
+    return this.http.get<SalesStand>(`${environment.urlApi}/api/SalesStand/`+id);
   }
 
   createSalesStand(body:any){
@@ -32,9 +30,12 @@ export class SalestandService {
     return this.http.get<SalesStand[]>(`${environment.urlApi}/api/saleStandsByUser/`+id);
   }
 
-  // updateSalesStand(id: string, changes: Partial<Product>): any {
-  //   return this.http.put(`${environment.url_api}/products/${id}`, changes);
+  // updateSalesStand(id: Number, changes: Partial<SalesStand>): any {
+  //   return this.http.put(`${environment.urlApi}/products/`+id, changes);
   // }
+  updateSalesStand(id: Number, body:any) {
+    return this.http.put(`${environment.urlApi}/api/SalesStand/`+id, body);
+  }
 
   // deleteSalesStand(id: string): any {
   //   return this.http.delete(`${environment.url_api}/products/${id}`);

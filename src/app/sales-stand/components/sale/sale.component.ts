@@ -9,9 +9,11 @@ import { SalesStand } from 'src/app/SalesStand.module';
 export class SaleComponent {
 
    @Input() sales: SalesStand;
-
+   @Input() boolEdit:boolean;
+   @Input() boolDelete:boolean;
    constructor(){
-
+    this.boolEdit=false;
+    this.boolDelete=false
    }
   
    ngOnInit(): void {

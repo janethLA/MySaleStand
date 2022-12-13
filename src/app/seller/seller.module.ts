@@ -7,11 +7,13 @@ import { FormSaleComponent } from './components/form-sale/form-sale.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';;
 import { SalesStandModule } from '../sales-stand/sales-stand.module';
+import { SaleEditComponent } from './components/sale-edit/sale-edit.component';
 
 @NgModule({
   declarations: [
     ListSalesStandComponent,
-    FormSaleComponent
+    FormSaleComponent,
+    SaleEditComponent
   ],
   imports: [
     CommonModule,

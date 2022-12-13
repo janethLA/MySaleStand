@@ -5,7 +5,7 @@
         <span>Nuevo Puesto de Venta </span>
     </a>
     <div style="display: flex;  flex-wrap: wrap; padding: 5px; "  >
-        <app-sale style="margin-right: 25px; margin-bottom: 25px;" 
+        <app-sale [boolEdit]=true [boolDelete]=true style="margin-right: 25px; margin-bottom: 25px;" 
         *ngFor = "let s of sales" 
         [sales]="s"></app-sale>
     </div>
