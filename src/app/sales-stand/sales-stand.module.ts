@@ -14,6 +14,9 @@ import { SalesStandRoutingModule } from './sales-stand-routing.module';
     CommonModule,
     MaterialModule,
     SalesStandRoutingModule
+  ],
+  exports: [
+    SaleComponent
   ]
 })
 export class SalesStandModule { 

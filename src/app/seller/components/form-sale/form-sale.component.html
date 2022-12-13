@@ -1,34 +1,33 @@
 <div class="sale-container">
-    <form>
+    <form [formGroup]="saleForm" (ngSubmit)="saveSale()">
         <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;"> 
             <h2>REGISTRAR PUESTO DE VENTA</h2>
         </div> 
           <p>
             <mat-form-field appearance="outline"   style="width: 50%;">
               <mat-label>Nombre del Puesto de Venta</mat-label>
-              <input matInput placeholder="Ingrese nombre del puesto de venta">
-              <mat-hint>Hint</mat-hint>
+              <input matInput placeholder="Ingrese nombre del puesto de venta" required type="text" formControlName="salesStandName">
               <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
                 <mat-label>Dirección</mat-label>
-                <input matInput placeholder="Ingrese la dirección" required type="text">
+                <input matInput placeholder="Ingrese la dirección" required type="text" formControlName="address">
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
                 <mat-label>Descripción</mat-label>
-                <textarea matInput placeholder="Ingrese una descripción" required type="text"></textarea>
+                <textarea matInput placeholder="Ingrese una descripción" required type="text" formControlName="description"></textarea>
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
                 <mat-label><mat-icon style="font-size: 25px;">upload_file</mat-icon>Añadir imagen</mat-label>
-                <input matInput placeholder="Ingrese una descripción" required type="text" >
+                <input matInput placeholder="Ingrese una imagen" required type="file"  [accept]="'.jpg'"  (change)="onFileSelected($event)" >
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>   

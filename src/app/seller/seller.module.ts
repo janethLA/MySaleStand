@@ -5,7 +5,8 @@ import { SellerRoutingModule } from './seller-routing.module';
 import { ListSalesStandComponent } from './components/list-sales-stand/list-sales-stand.component';
 import { FormSaleComponent } from './components/form-sale/form-sale.component';
 import { MaterialModule } from '../material/material.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';;
+import { SalesStandModule } from '../sales-stand/sales-stand.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     SellerRoutingModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    SalesStandModule
   ]
 })
 export class SellerModule { }

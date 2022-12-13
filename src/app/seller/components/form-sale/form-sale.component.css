@@ -12,33 +12,10 @@
     margin: 10px;
 }
 
-/* .container-form{
-    text-align: center;
-    font-size: 14px;
-    padding: 20px;
-    width: 95%;
-    display: block;
-    
-}
-.fields{
-    width: 50%;
-    font-size: 14px;
-}
 button{
     background-color:#0460ca ;
-    color: rgb(13, 11, 11);
+    color: white;
 }
-.field{
-    font-size: 14px;
-}
-h2{
-    color:#575757;
-    font-family:Montserrat;
-    font-weight:800;
-    line-height:16px;
-    margin:15px 0px 3px;
-    text-align: center;
-  }
 ::ng-deep .snackSuccess {
-    background-color: #41a812;
-  } */
+    background-color: #43ca04;
+  }

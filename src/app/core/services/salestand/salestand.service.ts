@@ -18,14 +18,20 @@ export class SalestandService {
     return this.http.get<SalesStand []>(`${environment.urlApi}/api/allSalesStands`);
   }
   //getSalesStand(id: string): Observable<Product> {
-  getSalesStand(id: string){
+  getSaleStand(id: string){
     //return this.http.get<Product>(`${environment.url_api}/products/${id}`);
-    return this.http.get(`${environment.urlApi}/api/SalesStand/$(id)`);
+    return this.http.get<SalesStand>(`${environment.urlApi}/api/SalesStand/$(id)`);
   }
-  createSalesStand(salesStand: any): any {
-    return this.http.post(`${environment.urlApi}/api/SalesStand`, salesStand);
-    //post('http://localhost:8080/api/product/createProduct/'+this.productForm.get('idCategory').value,salesStand)
+
+  createSalesStand(body:any){
+      return this.http.post(`${environment.urlApi}/api/createSale`, body);
   }
+
+  getSaleStandByUser(id: Number){
+    
+    return this.http.get<SalesStand[]>(`${environment.urlApi}/api/saleStandsByUser/`+id);
+  }
+
   // updateSalesStand(id: string, changes: Partial<Product>): any {
   //   return this.http.put(`${environment.url_api}/products/${id}`, changes);
   // }

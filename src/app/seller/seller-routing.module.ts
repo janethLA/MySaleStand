@@ -5,7 +5,7 @@ import { FormSaleComponent } from './components/form-sale/form-sale.component';
 import { ReactiveFormsModule} from '@angular/forms'
 const routes: Routes = [
   {
-    path: '',
+    path: 'showSaleStand',
     component: ListSalesStandComponent
   },
   {
