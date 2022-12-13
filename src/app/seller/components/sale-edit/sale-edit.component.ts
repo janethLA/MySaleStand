@@ -41,29 +41,33 @@ export class SaleEditComponent implements OnInit {
       this.salestandService.getSaleStand(this.id)
       .subscribe((salesStand: SalesStand) => {
         this.saleForm.patchValue(salesStand);
-        this.formD.append("salesStandName",this.saleForm.get('salesStandName')?.value);
-        this.formD.append("address",this.saleForm.get('address')?.value);
-        this.formD.append("description",this.saleForm.get('description')?.value);
-        this.formD.append("longitude","12345");
-        this.formD.append("latitude","125637");
-        this.formD.append("UserId","2");
-        this.formData=this.formD;
       })
     })
   }
 
   saveSale(){
+    this.formD.append("salesStandName",this.saleForm.get('salesStandName')?.value);
+    console.log("hoosl"+this.saleForm.get('salesStandName')?.value);
+    this.formD.append("address",this.saleForm.get('address')?.value);
+    this.formD.append("description",this.saleForm.get('description')?.value);
+    this.formD.append("longitude","12345");
+    this.formD.append("latitude","125637");
+    this.formD.append("UserId","2");
+    // this.formData.append("image", this.saleForm.get('image')?.value);
+      
+    this.formData=this.formD;
     console.log("formData",this.formData);
     this.salestandService.updateSalesStand(this.id,this.formData).subscribe({
       next:()=>{
-        this.snack.open('Puesto de Venta actualizado exitosamente.','CERRAR',{duration:100000,panelClass:'snackSuccess',})
+        console.log(this.formData);
+        this.snack.open('Puesto de Venta actualizado exitosamente.','CERRAR',{duration:5000,panelClass:'snackSuccess',})
         this.router.navigate(['/seller/showSaleStand']).then(() => {
         window.location.reload();
         });
             
       },
       error:()=>{
-        this.snack.open('Fallo al actualizar el Puesto de Venta','CERRAR',{duration:20000});
+        this.snack.open('Fallo al actualizar el Puesto de Venta','CERRAR',{duration:5000});
         
       }
       })
@@ -74,10 +78,8 @@ export class SaleEditComponent implements OnInit {
     console.log(image, event);
     if (image) {
       this.fileName = image.name;
-      const formD = new FormData();
-      formD.append("image", image);
+      this.formD.append("image", image);
       this.saleForm.get('image')?.setValue(image);
-      this.formData=this.formD;
      }
   }
 

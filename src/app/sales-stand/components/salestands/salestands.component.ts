@@ -25,13 +25,4 @@ export class SalestandsComponent implements OnInit {
       this.sales = sales;
     }) 
   }
-
-  // createSalesStand(){
-  //   this.salestandService.createSalesStand(sales)
-  //   .subscribe(sale =>{
-  //     console.log(sale);
-  //   })
-  //}
-  
-
 }

@@ -6,6 +6,14 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 26px;
 }
+h2{
+  color:#575757;
+  font-family:Montserrat;
+  font-weight:800;
+  line-height:16px;
+  margin:15px 0px 3px;
+  text-align: center;
+}
 
 mat-toolbar {
   background-color: #002b5c;
