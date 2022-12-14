@@ -71,7 +71,7 @@ export class FormSaleComponent implements OnInit {
       formD.append("description",this.saleForm.get('description')?.value);
       formD.append("longitude","12345");
       formD.append("latitude","125637");
-      formD.append("UserId","2");
+      formD.append("UserId","6");
       console.log("formData",formD);
       console.log(formD.get('description')?.valueOf);
       this.formData=formD;

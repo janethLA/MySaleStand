@@ -26,6 +26,7 @@
     "@googlemaps/js-api-loader": "^1.15.1",
     "@types/googlemaps": "^3.43.3",
     "@types/node-fetch": "^2.6.2",
+    "ngx-cookie-service": "^15.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

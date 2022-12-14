@@ -20,7 +20,7 @@ export class ListSalesStandComponent implements OnInit {
   }
 
   fetchSaleStandsByUser(){
-    this.salestandService.getSaleStandByUser(2)
+    this.salestandService.getSaleStandByUser(6)
     .subscribe(sales => {
       console.log(sales);
       this.sales = sales;

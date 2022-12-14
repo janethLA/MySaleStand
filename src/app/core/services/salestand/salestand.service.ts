@@ -12,11 +12,10 @@ export class SalestandService {
     private http: HttpClient,
   ) { }
 
-  //getAllSalesStand(): Observable<Product[]> {
   getAllSalesStand(){
     return this.http.get<SalesStand []>(`${environment.urlApi}/api/allSalesStands`);
   }
-  //getSalesStand(id: string): Observable<Product> {
+  
   getSaleStand(id: Number){
     return this.http.get<SalesStand>(`${environment.urlApi}/api/SalesStand/`+id);
   }
