@@ -29,9 +29,6 @@ export class SalestandService {
     return this.http.get<SalesStand[]>(`${environment.urlApi}/api/saleStandsByUser/`+id);
   }
 
-  // updateSalesStand(id: Number, changes: Partial<SalesStand>): any {
-  //   return this.http.put(`${environment.urlApi}/products/`+id, changes);
-  // }
   updateSalesStand(id: Number, body:any) {
     return this.http.put(`${environment.urlApi}/api/SalesStand/`+id, body);
   }

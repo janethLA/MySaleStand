@@ -6,30 +6,44 @@
           <p>
             <mat-form-field appearance="outline"   style="width: 50%;">
               <mat-label>Nombre del Puesto de Venta</mat-label>
-              <input matInput placeholder="Ingrese nombre del puesto de venta" required type="text" formControlName="salesStandName">
+              <input matInput placeholder="Ingrese nombre del puesto de venta" 
+                     required type="text" 
+                     formControlName="salesStandName">
               <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
                 <mat-label>Dirección</mat-label>
-                <input matInput placeholder="Ingrese la dirección" required type="text" formControlName="address">
+                <input matInput placeholder="Ingrese la dirección" 
+                       required type="text" 
+                       formControlName="address">
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
                 <mat-label>Descripción</mat-label>
-                <textarea matInput placeholder="Ingrese una descripción" required type="text" formControlName="description"></textarea>
+                <textarea matInput placeholder="Ingrese una descripción" 
+                          required type="text" 
+                          formControlName="description">
+                </textarea>
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>
           <p>
-            <mat-label  style="padding-right: 35%;" ><mat-icon style="font-size: 25px;padding-right: 1%;">upload_file</mat-icon>Actualizar Imagen</mat-label>
+            <mat-label  style="padding-right: 35%;" >
+              <mat-icon style="font-size: 25px;padding-right: 1%;">
+                upload_file
+              </mat-icon>
+              Actualizar Imagen
+            </mat-label>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 50%;">
-                <input matInput placeholder="Ingrese una imagen" required type="file"  [accept]="'.jpg'"  (change)="onFileSelected($event)" >
+                <input matInput placeholder="Ingrese una imagen" 
+                       required type="file"  [accept]="'.jpg'"  
+                       (change)="onFileSelected($event)" >
                  <mat-error>este campo es requerido</mat-error>
             </mat-form-field>
           </p>   
@@ -38,7 +52,8 @@
     
           </div> -->
           <div style="text-align: center; width: 100%;">
-            <button mat-raised-button type="submit" class="btn-login" [disabled]="saleForm.invalid">
+            <button mat-raised-button type="submit" class="btn-login" 
+                    [disabled]="saleForm.invalid">
                 ACTUALIZAR DATOS
             </button>
         </div>

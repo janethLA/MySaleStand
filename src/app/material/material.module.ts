@@ -7,8 +7,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
-// import { MatSidenav } from '@angular/material/sidenav';
-// import { MatSidenavContainer } from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -39,8 +37,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    // MatSidenav,
-    // MatSidenavContainer,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
@@ -73,8 +69,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   exports:[
     ReactiveFormsModule,
     FormsModule,
-    // MatSidenav,
-    // MatSidenavContainer,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,

@@ -4,4 +4,5 @@ export interface SalesStand {
     address: string;
     image: any;
     description: string;
+    userId:Number;
   }

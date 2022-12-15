@@ -21,7 +21,7 @@ export class SalestandsComponent implements OnInit {
   fetchSalesStands(){
     this.salestandService.getAllSalesStand()
     .subscribe(sales => {
-      console.log(sales);
+      //console.log(sales);
       this.sales = sales;
     }) 
   }

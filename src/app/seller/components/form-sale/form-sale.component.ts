@@ -25,6 +25,7 @@ export class FormSaleComponent implements OnInit {
 
   dataFile:any;
   fileName = '';
+  user:any;
   formData = new FormData();
 
   saleForm= this.formBuilder.group({
@@ -37,21 +38,22 @@ export class FormSaleComponent implements OnInit {
     image:['',[Validators.required]]
     
   });
+
   ngOnInit(): void {
-    
+    this.loadDataUser();
   }
 
   saveSale(){
     this.salestandService.createSalesStand(this.formData).subscribe({
       next:()=>{
-        this.snack.open('Puesto de Venta registrada exitosamente.','CERRAR',{duration:100000,panelClass:'snackSuccess',})
+        this.snack.open('Puesto de Venta registrada exitosamente.','CERRAR',{duration:5000,panelClass:'snackSuccess',})
         this.router.navigate(['/seller/showSaleStand']).then(() => {
         window.location.reload();
         });
             
       },
       error:()=>{
-        this.snack.open('Fallo al registrar el Puesto de Venta','CERRAR',{duration:20000});
+        this.snack.open('Fallo al registrar el Puesto de Venta','CERRAR',{duration:5000});
         
       }
       })
@@ -71,10 +73,13 @@ export class FormSaleComponent implements OnInit {
       formD.append("description",this.saleForm.get('description')?.value);
       formD.append("longitude","12345");
       formD.append("latitude","125637");
-      formD.append("UserId","6");
+      formD.append("UserId",this.user.userId);
       console.log("formData",formD);
       console.log(formD.get('description')?.valueOf);
       this.formData=formD;
      }
+  }
+  loadDataUser(){
+    this.user=JSON.parse(localStorage.getItem("user") || "{}")
   }
 }

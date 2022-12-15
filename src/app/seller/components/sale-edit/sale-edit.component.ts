@@ -17,13 +17,17 @@ export class SaleEditComponent implements OnInit {
   formData = new FormData();
   id:Number;
   formD = new FormData();
+  userId:string;
+
   constructor(
     private formBuilder: FormBuilder,
     private snack:MatSnackBar,
     private salestandService: SalestandService,
     private router:Router,
     private activeRoute: ActivatedRoute,
-  ) { }
+  ) {
+
+   }
 
   saleForm= this.formBuilder.group({
     salesStandName:['',[Validators.required]],
@@ -36,11 +40,14 @@ export class SaleEditComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    console.log("Es este id: "+this.id);
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
       this.salestandService.getSaleStand(this.id)
       .subscribe((salesStand: SalesStand) => {
         this.saleForm.patchValue(salesStand);
+        this.userId = ""+salesStand.userId;
+        console.log(salesStand);
       })
     })
   }
@@ -52,15 +59,14 @@ export class SaleEditComponent implements OnInit {
     this.formD.append("description",this.saleForm.get('description')?.value);
     this.formD.append("longitude","12345");
     this.formD.append("latitude","125637");
-    this.formD.append("UserId","2");
-    // this.formData.append("image", this.saleForm.get('image')?.value);
-      
+    
     this.formData=this.formD;
     console.log("formData",this.formData);
     this.salestandService.updateSalesStand(this.id,this.formData).subscribe({
       next:()=>{
         console.log(this.formData);
-        this.snack.open('Puesto de Venta actualizado exitosamente.','CERRAR',{duration:5000,panelClass:'snackSuccess',})
+        this.snack.open('Puesto de Venta actualizado exitosamente.','CERRAR',
+            {duration:5000,panelClass:'snackSuccess',})
         this.router.navigate(['/seller/showSaleStand']).then(() => {
         window.location.reload();
         });

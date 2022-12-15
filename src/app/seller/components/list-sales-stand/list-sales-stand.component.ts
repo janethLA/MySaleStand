@@ -11,16 +11,23 @@ import { SalesStand } from 'src/app/SalesStand.module';
 })
 export class ListSalesStandComponent implements OnInit {
   sales: SalesStand [] = [];
+  user:any;
 
   constructor(
     private salestandService: SalestandService
   ) { }
+
   ngOnInit(): void {
+    this.loadDataUser();
     this.fetchSaleStandsByUser();
   }
 
+  loadDataUser(){
+    this.user=JSON.parse(localStorage.getItem("user") || "{}")
+  }
+
   fetchSaleStandsByUser(){
-    this.salestandService.getSaleStandByUser(6)
+    this.salestandService.getSaleStandByUser(this.user.userId)
     .subscribe(sales => {
       console.log(sales);
       this.sales = sales;

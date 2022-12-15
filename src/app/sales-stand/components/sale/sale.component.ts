@@ -33,15 +33,16 @@ export class SaleComponent {
    openDialog():void{
     const dialogRef = this.dialog.open(ConfirmDialogComponent,{
       width: '250px',
-      data:"el puesto de venta: "+this.sale.salesStandName
+      data:"El puesto de venta: "+this.sale.salesStandName
     });
+
     dialogRef.afterClosed().subscribe(res=>{
       console.log(res);
       if(res){
-        console.log("fichero borrado");
         this.salestandService.deleteSalesStand(this.sale.id).subscribe({
           next:()=>{
-            this.snack.open('Puesto de Venta eliminado  exitosamente.','CERRAR',{duration:5000,panelClass:'snackSuccess',})
+            this.snack.open('Puesto de Venta eliminado  exitosamente.','CERRAR',
+            {duration:5000,panelClass:'snackSuccess',})
             this.router.navigate(['/seller/showSaleStand']).then(() => {
             window.location.reload();
             });

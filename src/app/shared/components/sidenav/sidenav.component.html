@@ -1,7 +1,7 @@
 <!-- <p>sidenav works!</p> -->
 <img src=""  class="avatar mat-elevation-z8">
-<h4 class="name">{{user?.userName}}</h4>
-<p class="designation">Vendedor</p>
+<h4 class="name">{{user?.name}}</h4>
+<p class="designation" >Bienvenido(a)</p>
 
 <mat-divider></mat-divider>
 
@@ -10,7 +10,7 @@
         <span>Inicio</span>
     </a>
     
-    <a mat-button class="menu-button" routerLink="/seller/showSaleStand" >
+    <a mat-button class="menu-button" *ngIf="userLogued" routerLink="/seller/showSaleStand" >
         <mat-icon>store</mat-icon>
         <span>Puesto de Venta</span>
     </a>
@@ -21,8 +21,8 @@
     </a>
 
     <mat-divider></mat-divider>
-    <a mat-button class="menu-button" >
+    <a mat-button class="menu-button" *ngIf="userLogued" (click)="logout()" >
         <mat-icon>logout</mat-icon>
-        <span>Logout</span>
+        <span>Cerrar Sesion</span>
     </a>
     
