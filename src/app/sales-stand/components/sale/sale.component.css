@@ -57,3 +57,8 @@ button:hover {
   cursor: pointer; 
 } 
 
+::ng-deep .snackSuccess {
+  background-color: #4bdf06;
+  color: black;
+}
+

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LayoutComponent } from './shared/components/layout/layout.component';
+
+import { CookieService } from 'ngx-cookie-service';
+import { interceptorProvider, } from './security/jwt-interceptor.interceptor';
 import { FormSaleComponent } from './seller/components/form-sale/form-sale.component';
 import { LoginComponent } from './auth/components/login/login.component';
 
@@ -38,6 +41,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
             preloadingStrategy: PreloadAllModules
   })],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [CookieService,interceptorProvider]
 })
 export class AppRoutingModule { }

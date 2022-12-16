@@ -13,11 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'createSaleStand',
-    component: FormSaleComponent
+    component: FormSaleComponent,
+    canActivate:[UserGuard]
   },
   {
     path: 'updateSaleStand/:id',
-    component: SaleEditComponent
+    component: SaleEditComponent,
+    canActivate:[UserGuard]
   }
 ];
 
