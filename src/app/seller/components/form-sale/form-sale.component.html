@@ -8,6 +8,7 @@
               <mat-label>Nombre del Puesto de Venta</mat-label>
               <input matInput placeholder="Ingrese nombre del puesto de venta" required type="text" formControlName="salesStandName">
               <mat-error>este campo es requerido</mat-error>
+              <mat-error>minimo 3 caracteres</mat-error>
             </mat-form-field>
           </p>
           <p>
@@ -15,6 +16,7 @@
                 <mat-label>Dirección</mat-label>
                 <input matInput placeholder="Ingrese la dirección" required type="text" formControlName="address">
                  <mat-error>este campo es requerido</mat-error>
+                 <mat-error>minimo 5 caracteres</mat-error>
             </mat-form-field>
           </p>
           <p>
@@ -22,6 +24,7 @@
                 <mat-label>Descripción</mat-label>
                 <textarea matInput placeholder="Ingrese una descripción" required type="text" formControlName="description"></textarea>
                  <mat-error>este campo es requerido</mat-error>
+                 <mat-error>minimo 5 caracteres</mat-error>
             </mat-form-field>
           </p>
           <p>
