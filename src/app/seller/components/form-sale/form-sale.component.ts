@@ -29,9 +29,9 @@ export class FormSaleComponent implements OnInit {
   formData = new FormData();
 
   saleForm= this.formBuilder.group({
-    salesStandName:['',[Validators.required]],
-    address:['',[Validators.required]],
-    description:['',[Validators.required]],
+    salesStandName:['',[Validators.minLength(3),Validators.required]],
+    address:['',[Validators.minLength(5),Validators.required]],
+    description:['',[Validators.minLength(5),Validators.required]],
     // longitude:['',[Validators.required]],
     // latitude:['',[Validators.required]],
     //id:['',[Validators.required]],
