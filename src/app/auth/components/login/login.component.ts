@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       .subscribe( {
         next:(respuesta:any)=>{
           const dateNow = new Date();
-          dateNow.setMinutes(dateNow.getMinutes() + 30);
+          dateNow.setMinutes(dateNow.getMinutes() + 60);
           this.cookieService.set('token',respuesta.token, dateNow)
           this.user={userId:respuesta.idUser,name:respuesta.name,rol:respuesta.rol}
           this.saveDataUser();
