@@ -29,15 +29,15 @@ export class FormSaleComponent implements OnInit {
   user: any;
   formData = new FormData();
 
-  saleForm = this.formBuilder.group({
-    salesStandName: ['', [Validators.required]],
-    address: ['', [Validators.required]],
-    description: ['', [Validators.required]],
+saleForm= this.formBuilder.group({
+    salesStandName:['',[Validators.minLength(3),Validators.required]],
+    address:['',[Validators.minLength(5),Validators.required]],
+    description:['',[Validators.minLength(5),Validators.required]],
     // longitude:['',[Validators.required]],
     // latitude:['',[Validators.required]],
     //id:['',[Validators.required]],
-    image: ['', [Validators.required]]
-
+    image:['',[Validators.required]]
+    
   });
 
   ngOnInit(): void {

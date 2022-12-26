@@ -1,47 +1,48 @@
 <div class="sale-container">
-  <form [formGroup]="saleForm" (ngSubmit)="saveSale()">
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-      <h2 style="color: #002b5c;">REGISTRAR PUESTO DE VENTA</h2>
-    </div>
-    <p>
-      <mat-form-field appearance="outline" style="width: 50%;">
-        <mat-label>Nombre del Puesto de Venta</mat-label>
-        <input matInput placeholder="Ingrese nombre del puesto de venta" required type="text"
-          formControlName="salesStandName">
-        <mat-error>este campo es requerido</mat-error>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline" style="width: 50%;">
-        <mat-label>Dirección</mat-label>
-        <input matInput placeholder="Ingrese la dirección" required type="text" formControlName="address">
-        <mat-error>este campo es requerido</mat-error>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline" style="width: 50%;">
-        <mat-label>Descripción</mat-label>
-        <textarea matInput placeholder="Ingrese una descripción" required type="text"
-          formControlName="description"></textarea>
-        <mat-error>este campo es requerido</mat-error>
-      </mat-form-field>
-    </p>
-    <p style="width: 100%; text-align: left;">
-      <label for="file-upload" class="custom-file-upload">
-        <mat-label>
-          <mat-icon style="font-size: 25px">upload_file</mat-icon>Anadir Imagen</mat-label>
-      </label>
-      <input id="file-upload" type="file" [accept]="'.jpg'" (change)="onFileSelected($event)" />
-      <label style="margin-left: 5%;">{{fileName}}</label>
-    </p>
-    <!-- <p style="text-align: start;" style="width: 100%;">Marque la ubicacion en el mapa:</p>      
+    <form [formGroup]="saleForm" (ngSubmit)="saveSale()">
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;"> 
+            <h2 style="color: #002b5c;">REGISTRAR PUESTO DE VENTA</h2>
+        </div> 
+          <p>
+            <mat-form-field appearance="outline"   style="width: 50%;">
+              <mat-label>Nombre del Puesto de Venta</mat-label>
+              <input matInput placeholder="Ingrese nombre del puesto de venta" required type="text" formControlName="salesStandName">
+              <mat-error>este campo es requerido</mat-error>
+              <mat-error>minimo 3 caracteres</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" style="width: 50%;">
+                <mat-label>Dirección</mat-label>
+                <input matInput placeholder="Ingrese la dirección" required type="text" formControlName="address">
+                 <mat-error>este campo es requerido</mat-error>
+                 <mat-error>minimo 5 caracteres</mat-error>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" style="width: 50%;">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput placeholder="Ingrese una descripción" required type="text" formControlName="description"></textarea>
+                 <mat-error>este campo es requerido</mat-error>
+                 <mat-error>minimo 5 caracteres</mat-error>
+            </mat-form-field>
+          </p>
+          <p style="width: 100%; text-align: left;">
+            <label for="file-upload" class="custom-file-upload">
+              <mat-label>
+                <mat-icon style="font-size: 25px">upload_file</mat-icon>Anadir Imagen</mat-label>
+            </label>
+            <input id="file-upload" type="file" [accept]="'.jpg'" (change)="onFileSelected($event)" />
+            <label style="margin-left: 5%;">{{fileName}}</label>
+          </p>
+          <!-- <p style="text-align: start;" style="width: 100%;">Marque la ubicacion en el mapa:</p>      
           <div class="map">
     
           </div> -->
-    <div style="text-align: center; width: 100%;">
-      <button mat-raised-button type="submit" class="btn-login" [disabled]="saleForm.invalid">
-        REGISTRAR
-      </button>
-    </div>
-  </form>
+          <div style="text-align: center; width: 100%;">
+            <button mat-raised-button type="submit" class="btn-login" [disabled]="saleForm.invalid">
+                REGISTRAR
+            </button>
+        </div>
+    </form>    
 </div>
