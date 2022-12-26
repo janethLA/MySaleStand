@@ -27,17 +27,14 @@
                  <mat-error>minimo 5 caracteres</mat-error>
             </mat-form-field>
           </p>
-          <p>
-            <mat-label  style="padding-right: 35%;" ><mat-icon style="font-size: 25px;padding-right: 1%;">upload_file</mat-icon>Anadir Imagen</mat-label>
+          <p style="width: 100%; text-align: left;">
+            <label for="file-upload" class="custom-file-upload">
+              <mat-label>
+                <mat-icon style="font-size: 25px">upload_file</mat-icon>Anadir Imagen</mat-label>
+            </label>
+            <input id="file-upload" type="file" [accept]="'.jpg'" (change)="onFileSelected($event)" />
+            <label style="margin-left: 5%;">{{fileName}}</label>
           </p>
-          <p>
-            
-            <mat-form-field appearance="outline" style="width: 50%;">
-                <!-- <mat-label><mat-icon style="font-size: 25px;">upload_file</mat-icon></mat-label> -->
-                <input matInput placeholder="Ingrese una imagen" required type="file"  [accept]="'.jpg'"  (change)="onFileSelected($event)" >
-                 <mat-error>este campo es requerido</mat-error>
-            </mat-form-field>
-          </p>   
           <!-- <p style="text-align: start;" style="width: 100%;">Marque la ubicacion en el mapa:</p>      
           <div class="map">
     
@@ -49,7 +46,3 @@
         </div>
     </form>    
 </div>
-
-
-
-  
