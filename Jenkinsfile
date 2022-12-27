@@ -27,6 +27,7 @@ pipeline {
             steps
             {
                 git branch: 'aunthenticate', url: 'https://github.com/janethLA/MySaleStand.git'
+               // git branch: 'aunthenticate', url: 'https://github.com/janethLA/MySaleStand.git'
                 sh 'npm install'
                 // dir('/src')
                 // {
